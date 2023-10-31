@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+        <table border="1">
+            <tr>
+                <th>API Name</th>
+                <th>Description</th>
+                <th>Auth</th>
+                <th>Https</th>
+                <th>Cors</th>
+                <th>Link</th>
+                <th>Category</th>
+            </tr>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.API }}</td>
+            <td>{{ entry.Description }}</td>
+            <td>{{ entry.Auth }}</td>
+            <td>{{ entry.HTTPS }}</td>
+            <td>{{ entry.Cors }}</td>
+            <td>{{ entry.Link }}</td>
+            <td>{{ entry.Category }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
+ 
